@@ -1,0 +1,33 @@
+{
+  "name": "Emotional Eye Bleach",
+  "description": "Redirects you to a webcomic when you try to look at your ex's social media",
+  "version": "1.0",
+  "minimum_chrome_version": "9",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon16.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_title": "Emotional Eye Bleach",
+    "default_popup": "popup.html",
+    "default_icon": "icon16.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.instagram.com/*",
+    "*://*.facebook.com/*",
+    "*://*.twitter.com/*",
+    "*://www.4chan.org/*",
+    "storage"
+  ],
+  "web_accessible_resources": ["src/options/options.html"]
+}
